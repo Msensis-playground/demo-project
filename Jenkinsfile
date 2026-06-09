@@ -27,7 +27,7 @@ pipeline {
                         ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/id_ed25519 root@10.0.0.186 << EOF
                         cd /var/demo-app
                         ln -sf ${jarName} app.jar
-                        systemctl restart demo-app.service
+                        systemctl restart myapp.service
 EOF
                     """
                 }
